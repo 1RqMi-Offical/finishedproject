@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+    width: 12px;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--purpleText);
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--gray);
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--graywhite);
+}
+
+html {
+    scroll-behavior: smooth;
+}

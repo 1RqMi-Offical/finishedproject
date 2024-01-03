@@ -1,0 +1,129 @@
+.fourthS .cards-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 100px auto auto;
+}
+
+
+.fourthS .cards-cont .card {
+    flex: 1 0 calc(100%/3 - 10%);
+    position: relative;
+    border-radius: 45px;
+    background-color: transparent;
+    border: 2px solid var(--gray, #000000);
+    box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.089);
+    padding: 50px 30px;
+    color: var(--black);
+    text-align: center;
+    transition: border 0.5s;
+    margin-bottom: 20px;
+}
+
+.fourthS .cards-cont .card:not(:last-child) {
+    margin-right: 20px;
+}
+
+.fourthS .cards-cont .card img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -70%);
+    top: 0;
+    background-size: contain !important;
+    background-position: 50%;
+    left: 50%;
+    transition: 0.5s;
+}
+
+.fourthS .cards-cont .card:hover img {
+    transform: translate(-50%, -70%) rotateY(180deg) scale(1.2);
+}
+
+.fourthS .cards-cont .card:hover {
+    border: 2px solid rgb(255, 0, 255);
+}
+
+.fourthS .cards-cont .card h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 25px;
+    opacity: 1;
+    transition: 0.5s;
+    white-space: pre-line;
+    color: rgb(255, 0, 255);
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.fourthS .cards-cont .card h2::before {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    height: 3px;
+    background-color: rgb(255, 0, 255);
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.fourthS .cards-cont .card p {
+    opacity: 1;
+    margin: 0;
+    font-size: 20px;
+    transition: color 0.5s;
+    white-space: pre-line;
+    margin-top: 60px;
+}
+
+.fourthS .cards-cont .card h2,
+.fourthS .cards-cont .card p {
+    flex: 1;
+}
+
+.fourthS .cards-cont .card:hover h2,
+.fourthS .cards-cont .card:hover p {
+    opacity: 0.8;
+}
+
+.fourthS .cards-cont .card:hover h2 {
+    color: rgb(255, 128, 255);
+}
+
+@media only screen and (max-width: 1000px) {
+    .fourthS .cards-cont {
+        flex-direction: column;
+        width: 90%;
+        margin: 30px auto auto;
+        justify-content: space-evenly;
+    }
+
+    .fourthS .cards-cont .card {
+        width: 100%;
+        text-align: left;
+    }
+
+    .fourthS .cards-cont .card h2 {
+        white-space: normal;
+    }
+
+    .fourthS .cards-cont .card p {
+        white-space: normal;
+        margin-top: 0px;
+    }
+
+    .fourthS .cards-cont .card img {
+        width: 25px;
+        height: 25px;
+        top: 35px;
+        left: 50px;
+        display: inline-block;
+    }
+
+    .fourthS .cards-cont .card h2::before {
+        content: unset;
+    }
+}

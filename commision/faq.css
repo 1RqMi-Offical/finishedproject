@@ -1,0 +1,122 @@
+.FAQ.sect {}
+
+.FAQ .cont {
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.FAQ .cont .card {
+    border: var(--gray) 2px solid;
+    color: var(--black);
+    padding: 15px;
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(255, 0, 255, 0);
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.267);
+}
+
+
+.FAQ .cont .card p {
+
+    overflow: hidden;
+    max-height: var(--maxed);
+    transition: 0.5s;
+    opacity: 0.8;
+    margin: 10px 0 0 0;
+    line-height: 40px;
+
+}
+
+.FAQ .cont .card:hover p {
+    opacity: 1;
+
+}
+
+.FAQ .cont .card.glow {
+    border: rgb(114, 114, 114) 2px solid;
+}
+
+.FAQ .cont .card:hover {
+    border: rgb(73, 0, 57) 2px solid;
+    ;
+}
+
+
+.FAQ .cont .card .expand {
+    max-height: var(--maxheight);
+
+}
+
+
+.head-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 5px 0;
+    transition: 0.5s;
+    border-bottom: var(--gray) 2px solid;
+}
+
+.head-card:hover,
+.head-card:hover button {
+    color: rgb(255, 0, 255) !important;
+}
+
+.colorize {
+
+    background-color: var(--graywhite);
+    border-radius: 5px;
+}
+
+.head-card .card-btn {
+    color: var(--black);
+    background-color: unset;
+    outline: 0;
+    border: none;
+    font-size: 25px;
+    transform: rotate(90deg);
+    transition: 0.5s;
+
+
+}
+
+.exp {
+    transform: rotate(0deg) !important;
+}
+
+.head-card .card-btn:focus {
+    outline: 0;
+    border: none;
+
+}
+
+
+
+@media (width < 1000px) {
+    .FAQ .cont {
+
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+
+
+    .FAQ .container h1 {
+        font-size: 25px;
+    }
+
+}

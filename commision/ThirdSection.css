@@ -1,0 +1,378 @@
+.container {
+    width: max-content;
+    margin: 0px auto;
+    padding: 20px;
+    color: var(--black);
+    text-align: center;
+    position: relative;
+
+}
+
+.container h1 {
+    font-size: clamp(26px, 3vw, 40px);
+}
+
+.container h3 {
+    font-size: clamp(16px, 2vw, 22px);
+    color: var(--black);
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+
+.str-cards {
+    position: relative;
+    width: 300%;
+
+    transition: transform 0.5s;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 300px;
+}
+
+.str-cards-cont {
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    height: 100%;
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.str-cards .cards {
+    width: fit-content;
+    color: var(--black);
+    padding: 20px 140px 45px 20px;
+    border: #df00ff solid 3px;
+    border-radius: 0 15px 15px 15px;
+    height: fit-content;
+    position: relative;
+
+    box-shadow: 0 0 15px 1px #dd00ff00;
+    transition: 0.5s;
+    background-color: var(--white);
+    margin: 20px;
+}
+
+
+.str-cards .cards h2 {
+    position: absolute;
+    background-color: var(--white);
+    padding: 2px 5px;
+    top: 0;
+    left: 10px;
+    border-radius: 50px;
+    white-space: nowrap;
+    font-size: 26pt;
+    transform: translate(0, -50%);
+    transition: 0.5s;
+}
+
+.str-cards .cards p {
+    white-space: pre-line;
+    width: fit-content;
+    color: var(--black);
+    transition: 0.5s;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 5px;
+    border: purple 1px solid;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    bottom: 10%;
+    z-index: 10;
+    transition: 0.5s;
+
+}
+
+.pagination button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+.pagination ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.pagination ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: purple;
+    cursor: pointer;
+}
+
+.pagination ul li.active {
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: 2px solid purple;
+}
+
+.first-two-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+
+body {
+    height: 100%;
+}
+
+.thirdS {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    transition: 1s;
+    animation: HeroMover 2s infinite alternate-reverse;
+    position: absolute;
+    right: -50px;
+    width: 615px;
+    height: 615px;
+    background-size: 100% 100%;
+    bottom: 0px;
+    opacity: 1;
+}
+
+@keyframes HeroMover {
+    from {
+        bottom: 5%;
+    }
+
+    to {
+        bottom: 6%;
+    }
+}
+
+
+
+
+.str-cards-cont .cards .animator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.str-cards .cards .animator::after {
+    content: "";
+    width: 2%;
+    height: 200%;
+    min-width: 5px;
+    background-color: #dd00ff;
+    transform: translate(0, -50%) rotate(50deg);
+    filter: blur(50px);
+    left: -20%;
+    top: -20%;
+    position: absolute;
+    transition: 1s;
+    animation: mover-fx 2s infinite;
+}
+
+.str-cards .cards:hover .animator::after {
+    opacity: 0;
+}
+
+.str-cards .cards:hover {
+    box-shadow: 0 0 15px 1px #df00ff;
+}
+
+.str-cards .cards:hover h2 {
+    color: #df00ff;
+}
+
+.str-cards .cards:hover::after {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes mover-fx {
+
+    0%,
+    50% {
+        left: -20%;
+        top: -20%;
+    }
+
+    100% {
+        left: 110%;
+        top: 110%;
+    }
+}
+
+@keyframes mover-fx-slow {
+
+    0% {
+        left: -20%;
+        top: -20%;
+    }
+
+    100% {
+        left: 110%;
+        top: 110%;
+    }
+}
+
+.str-cards .cards::after {
+    content: "";
+    background-size: contain;
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    bottom: 10px;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: 0.5s;
+}
+
+.str-cards .str-cards-cont .first-two-cards .cards:nth-child(1)::after {
+    background-image: url("imgs/images/clock.png");
+}
+
+.str-cards .str-cards-cont .first-two-cards .cards:nth-child(2)::after {
+    background-image: url("imgs/images/shield.png");
+}
+
+.str-cards .str-cards-cont .cards:nth-child(2)::after {
+    background-image: url("imgs/images/trust.png");
+}
+
+.card-icon img {}
+
+
+.page-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.prev-button,
+.next-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 10px;
+    outline: none;
+}
+
+.prev-button:disabled,
+.next-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+@media (width < 1000px) {
+    .str-cards {
+        margin: 0;
+    }
+
+    .first-two-cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 50px auto 0px;
+    }
+
+    .hero {
+        width: 415px;
+        height: 415px;
+        bottom: unset;
+        top: 50%;
+        transform: translate(0, -30%);
+    }
+
+    .pagination {
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .str-cards .cards {
+        width: calc(50% - 30px);
+    }
+
+
+
+
+    .smaller-h2 {
+        font-size: 25px !important;
+    }
+
+    .smaller-p {
+        font-size: 16px !important;
+    }
+}
+
+.space-more {
+    padding: 20px;
+}
+
+@media (width < 850px) {
+    .pagination {
+        left: 50%;
+        transform: translate(-50%, -100%);
+        bottom: 0;
+    }
+
+    .str-cards {
+        margin-bottom: 150px;
+    }
+
+    .hero {
+        right: -100%;
+        opacity: 0;
+    }
+
+    .str-cards .cards p {
+
+        white-space: normal;
+
+    }
+
+    .str-cards-cont .cards {
+        width: calc(100% - 30px);
+        margin: 15px;
+        padding: 20px 15px 120px 15px;
+    }
+
+    .str-cards .cards::after {
+        top: unset;
+        bottom: 10px;
+        left: 50%;
+        right: unset;
+        transform: translate(-50%, 0);
+    }
+}

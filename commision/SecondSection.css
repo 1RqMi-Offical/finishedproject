@@ -1,0 +1,178 @@
+.secondS {
+    position: relative;
+}
+
+.secondS .text-cont h1 {
+
+    font-size: 40px;
+    color: var(--purpleText);
+    font-weight: 750;
+    padding: 20px 0;
+
+}
+
+.secondS .text-cont p {
+    padding: 5px 0;
+    font-size: 22px;
+    color: var(--black);
+    font-weight: 750;
+    opacity: 0.7;
+    font-weight: 500;
+
+}
+
+.flexer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+.infocards {
+
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+
+}
+
+.infocards::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    background-image: url("imgs/images/Mushroom1.png");
+    background-size: 100% 100%;
+    top: 0;
+    transform: translate(0, -50%);
+}
+
+.infocards .card {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    transition: 0.2s;
+    height: max-content;
+    overflow: hidden;
+    height: 100px;
+}
+
+
+
+.infocards .card img {
+    display: inline-block;
+    max-width: 30px;
+    max-height: 30px;
+    object-fit: contain;
+    transition: 0.5s;
+
+}
+
+.infocards .card img:hover {
+
+    transform: scale(1.2);
+
+}
+
+.infocards .card h2 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+
+}
+
+.infocards .card:hover {
+    background-color: rgba(255, 0, 221, 0.096);
+}
+
+.infocards .cardseparator {
+    margin: 10px;
+    width: 10px;
+    height: 50px;
+    background-color: var(--purpleText);
+    display: block;
+}
+
+.infocards .card h2 span {
+    transition: 0.5s;
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0);
+    padding: 3px 10px;
+    border-radius: 70px;
+    border: rgba(255, 156, 255, 0) solid 1px;
+    margin: 5px;
+}
+
+.infocards .card:hover h2 span {
+    color: var(--purpleText);
+
+    background-color: var(--white);
+
+    border-radius: 50px;
+    border: var(--purpleText) solid 1px;
+    box-shadow: rgba(255, 89, 255, 0.164) 0 0 10px 1px;
+
+
+}
+
+.clock {
+    border-radius: 50%;
+}
+
+@media (width < 1000px) {
+
+    .infocards .card h2 {
+        font-size: 30px;
+    }
+
+    .secondS .text-cont h1 {
+        font-size: 30px;
+    }
+
+    .secondS .text-cont p {
+        font-size: 18px;
+    }
+
+    .secondS {
+        padding: 0 30px !important;
+    }
+
+    .infocards {
+        margin: 20px auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .infocards .card {
+        width: 50%;
+        min-width: max-content;
+
+    }
+
+    .infocards .card h2 {
+        font-size: 25px;
+    }
+
+    .infocards .cardseparator {
+        width: 50%;
+        height: 3px;
+    }
+
+    .sect-Separator {
+        padding: 20px !important;
+    }
+
+}

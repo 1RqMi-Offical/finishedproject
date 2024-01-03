@@ -1,0 +1,238 @@
+.container-join {
+    position: relative;
+    display: flex;
+    margin: 30px auto 100px;
+
+    width: 90%;
+
+
+
+}
+
+.fiveS {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--white);
+}
+
+
+.container-join .card {
+    display: inline-block;
+    transform-style: preserve-3d;
+    border-radius: 30px;
+    padding: 20px;
+    width: min-content;
+    display: flex;
+
+    align-content: space-evenly;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.116), rgba(255, 255, 255, 0.103));
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: 1;
+    width: max-content;
+    border: var(--gray) 2px solid;
+    transition: 1s;
+    backdrop-filter: blur(5px);
+}
+
+.container-join .hero {
+
+    bottom: 0;
+    top: unset;
+    transform: translate(0, 20%);
+}
+
+.container-join .card,
+.container-join .img {
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.205);
+}
+
+.container-join .card img {
+    filter: var(--inverted);
+}
+
+
+
+.card.rotate-top.rotate-left {
+    transform: perspective(800px) rotateX(2deg) rotateY(-2deg) !important;
+}
+
+.card.rotate-top.rotate-right {
+    transform: perspective(800px) rotateX(2deg) rotateY(2deg) !important;
+}
+
+.card.rotate-bottom.rotate-right {
+    transform: perspective(800px) rotateX(-2deg) rotateY(2deg) !important;
+}
+
+.card.rotate-bottom.rotate-left {
+    transform: perspective(800px) rotateX(-2deg) rotateY(-2deg) !important;
+}
+
+.container-join .card h3 {
+    color: var(--black);
+    margin-bottom: 10px;
+    color: var(--yellow);
+    position: relative;
+}
+
+.container-join .card h3::before,
+.container-join .card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 90px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("imgs/images/Mushroom2.png");
+    transform: translate(-80%, -53%) rotate(270deg);
+}
+
+.container-join .card::after {
+    background-image: url("imgs/images/Mushroom1.png");
+    transform: translate(50%, -20%) rotate(110deg) scaleX(-1);
+    top: unset;
+    bottom: 0;
+    left: unset;
+    right: 0;
+}
+
+.container-join .card p {
+    margin-bottom: 5px;
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.container-join .card p::before {
+    content: "";
+    background-color: gold;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    transform: translate(-100%, 0);
+}
+
+.container-join .card img {
+    width: 80%;
+    min-width: 200px;
+    position: relative;
+    max-width: 400px;
+    height: max-content;
+    object-fit: contain;
+}
+
+.container-join .joiners {
+    position: relative;
+    color: var(--black);
+    margin: 20px;
+}
+
+.container-join .card {
+    counter-reset: paragraph-counter;
+}
+
+.container-join .card p {
+    counter-increment: paragraph-counter;
+}
+
+.container-join .card p::before {
+    content: counter(paragraph-counter) "" !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.copy {
+    padding: 15px 25px;
+    border-radius: 15px;
+    height: fit-content;
+    width: fit-content;
+    transform: translate(-50%, 115%);
+    z-index: 1;
+    overflow: hidden;
+    text-shadow: 0px 5px 2px rgba(0, 0, 0, 0.795);
+    font-size: clamp(20px, 3vw, 40px);
+}
+
+.copy:hover::before {
+    opacity: 0;
+}
+
+.copy:hover {
+    overflow: unset;
+    text-shadow: none;
+}
+
+.copy:hover::after {
+    content: "mc.servername.com";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-radius: 50px;
+    color: var(--black);
+    background-color: var(--graywhite);
+    backdrop-filter: blur(50px);
+    border: var(--gray) 1px solid;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    z-index: 2;
+    opacity: 1;
+    white-space: nowrap;
+
+}
+
+.copy::before {
+
+    content: '';
+    width: 30px;
+    position: absolute;
+    height: 100%;
+    transform: translate(0, -50%) rotate(50deg);
+    top: 0;
+    left: 0;
+    mix-blend-mode: overlay;
+    background-color: rgb(170, 77, 0);
+    display: inline-block;
+    filter: blur(15px);
+    animation: mover-fx-slow 1s infinite;
+    z-index: 2;
+}
+
+button:focus {
+    outline: 0;
+    border: none;
+}
+
+@media (width < 1000px) {
+    .container-join {
+        height: auto;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container-join .card {
+        min-width: fit-content;
+        width: 70%;
+        min-width: 80%;
+        position: relative;
+        margin: 0;
+    }
+
+
+
+}

@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+.space {}
+
+.sect {
+
+    min-height: max-content;
+    transition: 0.5s;
+    width: 100%;
+    position: relative;
+    background-color: var(--white);
+    margin: 0;
+}
+
+.firstS {
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+header .container-first {
+    margin-top: 70px;
+    position: relative;
+    width: 102%;
+    background-color: #333;
+    height: 510px;
+
+
+    overflow: hidden;
+
+}
+
+header .container-first .background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bg {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    background-image: url("./imgs/images/spawn.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 102%;
+    height: 104%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    transition: 0.5s;
+    background-size: cover;
+}
+
+.sect .container-first .headText {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(0, -50%);
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    letter-spacing: 3px;
+    display: flex;
+    text-transform: uppercase;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: 0.5s;
+}
+
+/*
+@media only screen and (min-width: 1270px) {
+    header .container-first .background {
+        position: relative;
+        background-image: url("./imgs/images/spawn.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        transition: 0.5s;
+        background-size: 105% 100%;
+    }
+
+}*/
+
+
+
+.headText p {
+    overflow: hidden;
+    display: block;
+    width: max-content;
+    white-space: nowrap;
+    border-right: solid 3px rgba(225, 0, 255, 0);
+    font-size: clamp(20px, 2vw, 40px);
+
+
+}
+
+
+
+.headText p:nth-child(2) {
+    opacity: 0;
+
+}
+
+.btn-play {
+    background-color: #ffdf58;
+    border: #ce47e37c 2px solid;
+    border-radius: 15px;
+    color: #FFB800;
+    font-size: 25px;
+    transition: 0.3s;
+    font-weight: 700;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+}
+
+.sect .container-first .playButton {
+    width: 20%;
+    max-width: 300px;
+    height: 70px;
+
+
+
+
+    min-width: 180px;
+    margin-bottom: 0px;
+}
+
+
+.playButton a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.btn-play:hover {
+    background-color: #ffe25e;
+    color: rgb(219, 95, 219);
+    bottom: 7%;
+}
+
+.sect .container-first .playButton:hover a::before {
+    rotate: 1deg;
+    transform-origin: left right;
+}
+
+.sect .container-first .playButton:hover a::after {
+    transform: translate(-50%, -50%) rotate(275deg);
+    transform-origin: bottom top;
+}
+
+.playButton a::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-image: url("imgs/images/Mushroom1.png");
+    background-size: 100% 100%;
+    width: calc(80px *1.5);
+    height: calc(90px *1.5);
+    background-color: #33333300;
+    z-index: 5;
+    top: -10px;
+    right: 0;
+    transform: translate(50%, -50%);
+    transition: 0.5s;
+
+
+}
+
+.playButton a::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-image: url("imgs/images/Mushroom2.png");
+    background-size: 100% 100%;
+    width: calc(80px *1.3);
+    height: calc(90px *1.3);
+    background-color: #33333300;
+    z-index: 5;
+    top: 29%;
+    left: -4%;
+    transform: translate(-50%, -50%) rotate(270deg);
+    transition: 0.5s;
+
+
+}
+
+
+@keyframes caretflicker {
+
+    0%,
+    90% {
+        border-right: solid 3px rgb(234, 75, 255);
+        opacity: 1;
+    }
+
+    100% {
+        border-right: solid 3px rgba(225, 0, 255, 0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes typewriter {
+
+    from {
+        width: 0;
+        opacity: 1;
+    }
+
+
+
+
+}
+
+@media (width < 1000px) {
+    .sect .container-first .headText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .headText p {
+        text-align: center;
+    }
+}

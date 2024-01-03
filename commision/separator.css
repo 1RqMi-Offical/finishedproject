@@ -1,0 +1,84 @@
+.secondS {
+
+    padding: 0 70px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.firstS {
+    border: none !important;
+}
+
+.sect-Separator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.15;
+    padding: 100px 20px 20px 20px;
+
+
+}
+
+.sect-Separator .sphere {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 60px;
+    background-color: var(--black);
+    margin: 10px;
+
+}
+
+.sect-Separator .lin {
+    position: relative;
+    width: 200px;
+    height: 3px;
+    background-image: linear-gradient(to left, var(--black), var(--opacityWhite));
+}
+
+.sect-Separator .line2 {
+    background-image: linear-gradient(to right, var(--black), var(--opacityWhite));
+
+}
+
+.sect-Separator .lin::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: translate(0, -50%) rotate(45deg);
+    top: 50%;
+    right: 0;
+    background-color: var(--black);
+}
+
+.sect-Separator .lin::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid var(--black);
+    transform: translate(0, -50%) scale(12, 1);
+    top: 50%;
+    right: 30px;
+
+}
+
+.sect-Separator .line2.lin::after {
+    left: 30px;
+    right: unset;
+    transform: translate(0px, -50%) rotate(180deg) scale(12, 1);
+}
+
+.sect-Separator .line2.lin::before {
+    right: unset;
+    left: 0px;
+    transform: translate(0, -50%) rotate(45deg);
+}
